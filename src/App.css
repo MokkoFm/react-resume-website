@@ -1,0 +1,63 @@
+.header-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.logo {
+  width: 100px;
+}
+
+.nav-wrapper {
+  display: flex;
+}
+
+.nav-wrapper li {
+  list-style-type: none;
+  padding: 20px;
+}
+
+.burger-menu {
+  padding: 20px 0;
+}
+
+.heading-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 40px 0;
+}
+
+.my-photo img {
+  width: 300px;
+}
+
+.heading-text {
+  margin: auto 0;
+}
+
+.app-header-wrapper {
+  background: url(./img/slider-bg.jpg);
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 40px 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-links li {
+  list-style-type: none;
+  padding: 20px;
+}
+
+.footer-wrapper {
+    background-color: #f4f4f2;
+}
+
+.copyright {
+  padding: 20px;;
+}
