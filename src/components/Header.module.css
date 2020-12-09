@@ -1,0 +1,21 @@
+.header_wrapper {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .logo {
+    width: 100px;
+  }
+  
+  .nav_wrapper {
+    display: flex;
+  }
+  
+  .nav_wrapper li {
+    list-style-type: none;
+    padding: 20px;
+  }
+  
+  .burger_menu {
+    padding: 20px 0;
+  }

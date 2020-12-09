@@ -1,0 +1,13 @@
+.heading_wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px 0;
+  }
+  
+  .my_photo img {
+    width: 300px;
+  }
+  
+  .heading_text {
+    margin: auto 0;
+  }

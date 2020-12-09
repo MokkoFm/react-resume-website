@@ -1,14 +1,16 @@
+import style from './Heading.module.css'
+
 const Heading = () => {
     return (
-        <div class="heading-wrapper">
+        <div class={style.heading_wrapper}>
 
-            <div className="heading-text">
+            <div className={style.heading_text}>
                 <h1>Sergei Elsakov</h1>
                 <p>I am a Django and React Developer</p>
                 <button>Learn more</button>
             </div>
 
-            <div className="my-photo">
+            <div className={style.my_photo}>
                 <img src="https://sun9-40.userapi.com/impf/c851236/v851236774/2721f/o-xyAz2am_c.jpg?size=1440x2160&quality=96&proxy=1&sign=f40e3cd7c4e180bbd5d3e36515d92070"></img>
             </div>
 

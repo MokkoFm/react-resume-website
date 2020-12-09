@@ -1,0 +1,23 @@
+.footer_wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px 0;
+  }
+  
+  .social_links {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .social_links li {
+    list-style-type: none;
+    padding: 20px;
+  }
+  
+  .footer_wrapper {
+      background-color: #f4f4f2;
+  }
+  
+  .copyright {
+    padding: 20px;;
+  }

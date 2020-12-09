@@ -1,14 +1,16 @@
+import style from './Header.module.css'
 const { default: Heading } = require("./Heading")
+
 
 const Header = () => {
     return (
       <div className="app-header-wrapper">
-        <header className="header-wrapper">
+        <header className={style.header_wrapper}>
           <div>
-            <img src="https://cdn.logo.com/hotlink-ok/logo-social.png" className="logo"></img>
+            <img src="https://cdn.logo.com/hotlink-ok/logo-social.png" className={style.logo}></img>
           </div>
           <nav className="nav">
-            <ul className="nav-wrapper">
+            <ul className={style.nav_wrapper}>
               <li>Home</li>
               <li>About</li>
               <li>Services</li>
@@ -18,7 +20,7 @@ const Header = () => {
               <li>Contact</li>
             </ul>
           </nav>
-          <div className="burger-menu">
+          <div className={style.burger_menu}>
             <a href="#">Burger</a>
           </div>
         </header>
