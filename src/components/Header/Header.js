@@ -1,5 +1,5 @@
 import style from './Header.module.css'
-const { default: Heading } = require("./Heading")
+const { default: Heading } = require("../Heading/Heading")
 
 
 const Header = () => {

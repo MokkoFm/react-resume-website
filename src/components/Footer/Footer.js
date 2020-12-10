@@ -3,7 +3,7 @@ import style from './Footer.module.css'
 const Footer = () => {
     return (
         <div className={style.footer_wrapper}>
-            <ul class={style.social_links}>
+            <ul className={style.social_links}>
                 <li>LinkedIn</li>
                 <li>Facebook</li>
                 <li>Instagram</li>
