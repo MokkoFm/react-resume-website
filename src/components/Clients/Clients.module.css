@@ -1,0 +1,15 @@
+.clients {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    padding: 50px;
+}
+
+.client {
+    padding: 5px;
+    text-align: center;
+}
+
+.testemonial{
+    padding: 5px;
+    
+}

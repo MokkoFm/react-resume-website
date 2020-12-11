@@ -19,3 +19,17 @@
   .burger_menu {
     padding: 20px 0;
   }
+
+  .nav_wrapper a.active {
+    color: red;
+  }
+
+  .nav_wrapper a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .nav_wrapper a:hover {
+    color: red;
+    text-decoration: none;
+  }
