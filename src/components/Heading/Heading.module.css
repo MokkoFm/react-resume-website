@@ -77,3 +77,43 @@
 }
 
 .main_color{color: #55ACEE;}
+
+@media screen and (max-width:991px){
+  .home_banner{
+    padding: 10rem 0 7.5rem;
+  }
+
+  .slider_right {
+    float: none;
+    margin-top: 6rem;
+  }
+
+.heading_box h2 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+  }
+
+.home_banner [class*=shape-]{
+    display: none;
+  }
+}
+
+@media screen and (max-width:767px){
+
+  section{
+      padding: 4.5rem 0;
+  }
+  .home_banner{
+      padding: 7rem 0 4.5rem;
+  }
+
+  .slider_right {
+      float: none;
+      margin-top: 5rem;
+  }
+
+  .heading_box h2 {
+      font-size: 2.3rem;
+      line-height: 1.1;
+  }
+}
