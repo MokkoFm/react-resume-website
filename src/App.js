@@ -16,11 +16,11 @@ const App = () => {
       <div>
         <div className="main-background">
           <Header />
-          <Route exact path='/' component={Heading} />
+          <Route exact path='/' render={ () => <Heading/> } />
         </div>
-        <Route exact path='/services' component={Services} />
-        <Route exact path='/abouts' component={Abouts} />
-        <Route path='/clients' component={Clients} />
+        <Route exact path='/services' render={ () => <Services/> } />
+        <Route exact path='/abouts' render={ () => <Abouts/> } />
+        <Route path='/clients' render={ () => <Clients/> } />
         <Footer />
       </div>
     </BrowserRouter>
