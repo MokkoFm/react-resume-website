@@ -30,18 +30,17 @@ const myTestimonials = [
     {id: 1, message: 'Thank you, Sergei!'},
 ]
 
+const myClientsList = myClients.map((client) => <Client name={client.name} id={client.id}/>);
+const myTestimonialsList = myTestimonials.map((testimonial) => <Testimonial message={testimonial.message}/>);
+
 const Clients = () => {
     return (
         <div className={style.clients}>
             <div>
-                <Client name={myClients[0].name} id={myClients[0].id}/>
-                <Client name={myClients[1].name} id={myClients[1].id}/>
-                <Client name={myClients[2].name} id={myClients[2].id}/>
+                {myClientsList}
             </div>
             <div>
-                <Testimonial message={myTestimonials[0].message}/>
-                <Testimonial message={myTestimonials[1].message}/>
-                <Testimonial message={myTestimonials[2].message}/>
+                {myTestimonialsList}
             </div>
         </div>
     )
