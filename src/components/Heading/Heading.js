@@ -9,7 +9,7 @@ const Heading = () => {
                     <div className="col-lg-7">
 
                         <div className={style.heading_box}>
-                            <h2>Elsakov Sergei <span className={style.main_color}>Developer</span></h2>
+                            <h2>Elsakov Sergei <span className={style.main_color + ' ' + style.small_font}>Web-Developer</span></h2>
                             <p>There are many variations of passages of Lorem Ipsum is at the available,
                                 but the majority have <span className={style.main_color}>suffered</span> alteration some form,
                                 by injected humour randomised words at the available.</p>

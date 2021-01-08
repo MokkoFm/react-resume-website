@@ -21,7 +21,7 @@
 }
 
 .nav_wrapper a.active {
-  color: red;
+  color: #55ACEE;
 }
 
 .nav_wrapper a {
@@ -30,6 +30,6 @@
 }
 
 .nav_wrapper a:hover {
-  color: red;
+  color: #55ACEE;
   text-decoration: none;
 }
