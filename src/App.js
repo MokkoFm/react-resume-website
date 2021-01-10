@@ -5,6 +5,7 @@ import Heading from './components/Heading/Heading'
 import Services from './components/Services/Services';
 import Abouts from './components/About/Abouts'
 import Clients from './components/Clients/Clients';
+import Blog from './components/Blog/Blog';
 import Footer from './components/Footer/Footer';
 
 const BrowserRouter = require("react-router-dom").BrowserRouter;
@@ -20,7 +21,8 @@ const App = (props) => {
         </div>
         <Route exact path='/services' render={ () => <Services/> } />
         <Route exact path='/abouts' render={ () => <Abouts/> } />
-        <Route path='/clients' render={ () => <Clients state={props.state.clients} /> } />
+        <Route exact path='/clients' render={ () => <Clients state={props.state.clients} /> } />
+        <Route exact path='/blog' render={() => <Blog/>}/>
         <Footer />
       </div>
     </BrowserRouter>
