@@ -10,7 +10,7 @@ import Footer from './components/Footer/Footer';
 const BrowserRouter = require("react-router-dom").BrowserRouter;
 const Route = require("react-router-dom").Route;
 
-const App = () => {
+const App = (props) => {
   return (
     <BrowserRouter>
       <div>
@@ -20,7 +20,7 @@ const App = () => {
         </div>
         <Route exact path='/services' render={ () => <Services/> } />
         <Route exact path='/abouts' render={ () => <Abouts/> } />
-        <Route path='/clients' render={ () => <Clients/> } />
+        <Route path='/clients' render={ () => <Clients myClients={props.myClients} myTestimonials={props.myTestimonials}/> } />
         <Footer />
       </div>
     </BrowserRouter>
