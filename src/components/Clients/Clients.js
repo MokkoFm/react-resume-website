@@ -19,8 +19,8 @@ const Testimonial = (props) => {
 }
 
 const Clients = (props) => {
-    const myClientsList = props.myClients.map((client) => <Client name={client.name} id={client.id}/>);
-    const myTestimonialsList = props.myTestimonials.map((testimonial) => <Testimonial message={testimonial.message}/>);
+    const myClientsList = props.state.myClients.map((client) => <Client name={client.name} id={client.id}/>);
+    const myTestimonialsList = props.state.myTestimonials.map((testimonial) => <Testimonial message={testimonial.message}/>);
 
     return (
         <div className={style.clients}>
