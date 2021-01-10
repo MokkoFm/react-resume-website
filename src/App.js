@@ -22,7 +22,7 @@ const App = (props) => {
         <Route exact path='/services' render={ () => <Services/> } />
         <Route exact path='/abouts' render={ () => <Abouts/> } />
         <Route exact path='/clients' render={ () => <Clients state={props.state.clients} /> } />
-        <Route exact path='/blog' render={() => <Blog/>}/>
+        <Route exact path='/blog' render={() => <Blog state={props.state.blog} addComment={props.addComment} />}/>
         <Footer />
       </div>
     </BrowserRouter>

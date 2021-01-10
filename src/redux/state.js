@@ -1,4 +1,9 @@
 let state = {
+    'blog': {
+        'comments': [
+            {id: 1, text: "Cool article!", likes: 11}
+        ],
+    },
     'clients': {
         'myClients': [
             {id: 1, name: 'IboxCorp'},
@@ -12,5 +17,14 @@ let state = {
         ]
     }
 };
+
+export let addComment = (text) => {
+    let new_comment = {
+        'id': 2,
+        'text': text,
+        'likes': 0,
+    };
+    state.blog.comments.push(new_comment);
+}
 
 export default state;
