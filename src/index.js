@@ -3,22 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-const myClients = [
-  {id: 1, name: 'IboxCorp'},
-  {id: 2, name: 'Helios Tour'},
-  {id: 3, name: 'Formula Spa'},
-]
-
-const myTestimonials = [
-{id: 1, message: 'It was cool to work with Sergei!'},
-{id: 1, message: 'Amazing developer!'},
-{id: 1, message: 'Thank you, Sergei!'},
-]
+import state from './redux/state';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App myClients={myClients} myTestimonials={myTestimonials}/>
+    <App state={state}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

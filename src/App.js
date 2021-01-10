@@ -20,7 +20,7 @@ const App = (props) => {
         </div>
         <Route exact path='/services' render={ () => <Services/> } />
         <Route exact path='/abouts' render={ () => <Abouts/> } />
-        <Route path='/clients' render={ () => <Clients myClients={props.myClients} myTestimonials={props.myTestimonials}/> } />
+        <Route path='/clients' render={ () => <Clients myClients={props.state.myClients} myTestimonials={props.state.myTestimonials}/> } />
         <Footer />
       </div>
     </BrowserRouter>
