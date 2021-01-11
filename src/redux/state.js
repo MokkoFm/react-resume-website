@@ -1,4 +1,6 @@
-import { rerenderEntireTree } from '../render'
+let rerenderEntireTree = () => {
+    console.log("State has changed")
+}
 
 let state = {
     'blog': {
@@ -23,19 +25,24 @@ let state = {
 
 window.state = state;
 
-export let addComment = (text) => {
-    let new_comment = {
+export let addComment = () => {
+    let newСomment = {
         'id': 2,
-        'text': text,
+        'text': state.blog.newComment,
         'likes': 0,
     };
-    state.blog.comments.push(new_comment);
+    state.blog.comments.push(newСomment);
+    state.blog.newComment = '';
     rerenderEntireTree(state);
 }
 
 export let updateComment = (newText) => {
     state.blog.newComment = newText;
     rerenderEntireTree(state);
+}
+
+export const subscribe = (observer) => {
+    rerenderEntireTree = observer;
 }
 
 export default state;

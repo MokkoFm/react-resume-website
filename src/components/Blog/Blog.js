@@ -15,9 +15,7 @@ const Blog = (props) => {
     let comments = props.state.comments.map((comment) => <Comment text={comment.text}/>);
 
     const addComment = () => {
-        let text = newComment.current.value;
-        props.addComment(text);
-        props.updateComment('');
+        props.addComment();
         newComment.current.value = '';
     }
 

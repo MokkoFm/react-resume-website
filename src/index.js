@@ -1,8 +1,22 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import state, { subscribe } from './redux/state';
+import { addComment, updateComment } from './redux/state';
 import reportWebVitals from './reportWebVitals';
-import state from './redux/state';
-import { rerenderEntireTree } from './render'
+
+let rerenderEntireTree = () => {
+  ReactDOM.render(
+    <React.StrictMode>
+      <App state={state} addComment={addComment} updateComment={updateComment}/>
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
+};
 
 rerenderEntireTree(state);
+subscribe(rerenderEntireTree);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
