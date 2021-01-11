@@ -5,6 +5,7 @@ let state = {
         'comments': [
             {id: 1, text: "Cool article!", likes: 11}
         ],
+        'newComment': 'Напиши меня',
     },
     'clients': {
         'myClients': [
@@ -20,6 +21,8 @@ let state = {
     }
 };
 
+window.state = state;
+
 export let addComment = (text) => {
     let new_comment = {
         'id': 2,
@@ -27,6 +30,11 @@ export let addComment = (text) => {
         'likes': 0,
     };
     state.blog.comments.push(new_comment);
+    rerenderEntireTree(state);
+}
+
+export let updateComment = (newText) => {
+    state.blog.newComment = newText;
     rerenderEntireTree(state);
 }
 

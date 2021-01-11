@@ -16,7 +16,14 @@ const Blog = (props) => {
 
     const addComment = () => {
         let text = newComment.current.value;
-        props.addComment(text)
+        props.addComment(text);
+        props.updateComment('');
+        newComment.current.value = '';
+    }
+
+    let onCommentChange = () => {
+        let text = newComment.current.value;
+        props.updateComment(text);
     }
 
     return (
@@ -26,7 +33,7 @@ const Blog = (props) => {
             </div>
             <div className={style.blog_wrapper}>
                 Name: <input type="text" name="username"></input>
-                <textarea ref={newComment}></textarea>
+                <textarea onChange={onCommentChange} ref={newComment}></textarea>
                 <input type="submit" onClick={ addComment }></input>
             </div>
             <div className={style.blog_wrapper}>
