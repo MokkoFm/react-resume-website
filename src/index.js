@@ -5,13 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import state from './redux/state';
 import { addComment } from './redux/state';
+import { rerenderEntireTree } from './render'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App state={state} addComment={addComment}/>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+rerenderEntireTree(state);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

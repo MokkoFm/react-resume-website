@@ -1,3 +1,5 @@
+import { rerenderEntireTree } from '../render'
+
 let state = {
     'blog': {
         'comments': [
@@ -25,6 +27,7 @@ export let addComment = (text) => {
         'likes': 0,
     };
     state.blog.comments.push(new_comment);
+    rerenderEntireTree(state);
 }
 
 export default state;
