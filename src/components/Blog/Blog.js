@@ -15,13 +15,15 @@ const Blog = (props) => {
     let comments = props.state.comments.map((comment) => <Comment text={comment.text}/>);
 
     const addComment = () => {
-        props.addComment();
+        let action = {type: 'addComment'};
+        props.dispatch(action);
         newComment.current.value = '';
     }
 
     let onCommentChange = () => {
         let text = newComment.current.value;
-        props.updateComment(text);
+        let action = {type: 'updateComment', text: text};
+        props.dispatch(action);
     }
 
     return (

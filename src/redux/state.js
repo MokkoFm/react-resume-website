@@ -25,22 +25,23 @@ let store = {
     rerenderEntireTree() {
         console.log("State has changed");
     },
-    addComment() {
-        let newСomment = {
-            'id': 2,
-            'text': this._state.blog.newComment,
-            'likes': 0,
-        };
-        this._state.blog.comments.push(newСomment);
-        this._state.blog.newComment = '';
-        this.rerenderEntireTree(this._state);
-    },
-    updateComment(newText) {
-        this._state.blog.newComment = newText;
-        this.rerenderEntireTree(this._state);
-    },
     subscribe(observer) {
         this.rerenderEntireTree = observer;
+    },
+    dispatch(action) {
+        if (action.type === 'addComment') {
+            let newСomment = {
+                'id': 2,
+                'text': this._state.blog.newComment,
+                'likes': 0,
+            };
+            this._state.blog.comments.push(newСomment);
+            this._state.blog.newComment = '';
+            this.rerenderEntireTree(this._state);
+        } else if (action.type === 'updateComment') {
+            this._state.blog.newComment = action.text;
+            this.rerenderEntireTree(this._state);
+        }
     }
 }
 
