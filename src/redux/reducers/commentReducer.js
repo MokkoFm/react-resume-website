@@ -1,17 +1,21 @@
 const commentReducer = (state, action) => {
-    if (action.type === 'addComment') {
-        let newСomment = {
-            'id': 2,
-            'text': state.newComment,
-            'likes': 0,
-        };
-        state.comments.push(newСomment);
-        state.newComment = '';
-
-    } else if (action.type === 'updateComment') {
+    switch (action.type) {
+        case 'addComment':
+            let newСomment = {
+                'id': 2,
+                'text': state.newComment,
+                'likes': 0,
+            };
+            state.comments.push(newСomment);
+            state.newComment = '';
+            return state;
+        
+        case 'updateComment': 
         state.newComment = action.text;
-    }
-    return state;
+    
+        default:
+            return state;
+    };
 };
 
 export default commentReducer;
