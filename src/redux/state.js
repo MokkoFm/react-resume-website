@@ -1,3 +1,5 @@
+import commentReducer from './reducers/commentReducer'
+
 let store = {
     _state: {
         'blog': {
@@ -29,19 +31,8 @@ let store = {
         this.rerenderEntireTree = observer;
     },
     dispatch(action) {
-        if (action.type === 'addComment') {
-            let newСomment = {
-                'id': 2,
-                'text': this._state.blog.newComment,
-                'likes': 0,
-            };
-            this._state.blog.comments.push(newСomment);
-            this._state.blog.newComment = '';
-            this.rerenderEntireTree(this._state);
-        } else if (action.type === 'updateComment') {
-            this._state.blog.newComment = action.text;
-            this.rerenderEntireTree(this._state);
-        }
+        this._state.blog = commentReducer(this._state.blog, action);
+        this.rerenderEntireTree(this._state);
     }
 }
 
