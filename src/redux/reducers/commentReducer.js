@@ -1,4 +1,11 @@
-const commentReducer = (state, action) => {
+let initialState = {
+    'comments': [
+        {id: 1, text: "Cool article!", likes: 11}
+    ],
+    'newComment': 'Напиши меня',
+}
+
+const commentReducer = (state=initialState, action) => {
     switch (action.type) {
         case 'addComment':
             let newСomment = {
@@ -11,7 +18,8 @@ const commentReducer = (state, action) => {
             return state;
         
         case 'updateComment': 
-        state.newComment = action.text;
+            state.newComment = action.text;
+            return state;
     
         default:
             return state;
