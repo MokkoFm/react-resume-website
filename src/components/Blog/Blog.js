@@ -12,18 +12,15 @@ let Comment = (props) => {
 
 const Blog = (props) => {
     let newComment = React.createRef();
-    let comments = props.state.comments.map((comment) => <Comment text={comment.text}/>);
+    let comments = props.comments.map((comment) => <Comment text={comment.text}/>);
 
     const addComment = () => {
-        let action = {type: 'addComment'};
-        props.dispatch(action);
-        newComment.current.value = '';
+        props.addComment();
     }
 
     let onCommentChange = () => {
         let text = newComment.current.value;
-        let action = {type: 'updateComment', text: text};
-        props.dispatch(action);
+        props.updateComment(text);
     }
 
     return (
