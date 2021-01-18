@@ -1,22 +1,27 @@
 import React from 'react';
 import Blog from './Blog';
+import {connect} from 'react-redux';
 
 
-const BlogContainer = (props) => {
-
-    const addComment = () => {
-        let action = {type: 'addComment'};
-        props.dispatch(action);
-    }
-
-    let onCommentChange = (text) => {
-        let action = {type: 'updateComment', text: text};
-        props.dispatch(action);
-    }
-
-    return (
-        <Blog addComment={addComment} updateComment={onCommentChange} comments={props.state.blog.comments} />
-    )
+let mapStateToProps = (state) => {
+    return {
+        comments: state.blog.comments,
+    };
 };
+
+let mapDispatchToProps = (dispatch) => {
+    return {
+        addComment: () => {
+            let action = {type: 'addComment'};
+            dispatch(action);
+        }, 
+        updateComment: (text) => {
+            let action = {type: 'updateComment', text: text};
+            dispatch(action);
+        }
+    }
+}
+
+let BlogContainer = connect(mapStateToProps, mapDispatchToProps)(Blog);
 
 export default BlogContainer;
