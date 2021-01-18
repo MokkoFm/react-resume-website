@@ -4,8 +4,7 @@ import Header from './components/Header/Header';
 import Heading from './components/Heading/Heading'
 import Services from './components/Services/Services';
 import Abouts from './components/About/Abouts'
-import Clients from './components/Clients/Clients';
-import Blog from './components/Blog/BlogContainer';
+import ClientsContainer from './components/Clients/ClientsContainer';
 import Footer from './components/Footer/Footer';
 import BlogContainer from './components/Blog/BlogContainer';
 
@@ -22,7 +21,7 @@ const App = (props) => {
         </div>
         <Route exact path='/services' render={ () => <Services/> } />
         <Route exact path='/abouts' render={ () => <Abouts/> } />
-        <Route exact path='/clients' render={ () => <Clients state={props.state.clients} /> } />
+        <Route exact path='/clients' render={ () => <ClientsContainer state={props.state.clients} /> } />
         <Route exact path='/blog' render={() => <BlogContainer state={props.state} dispatch={props.dispatch} />}/>
         <Footer />
       </div>
